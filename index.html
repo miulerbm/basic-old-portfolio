@@ -4,44 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miuler XD</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-        }
-        header {
-            background-color: #3498db;
-            color: #fff;
-            padding: 20px;
-        }
-        h1 {
-            font-size: 2em;
-        }
-        p {
-            font-size: 1.2em;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 </head>
 <body>
-    <header>
-        <h1>Bienvenue! </h1>
-    </header>
-    <main>
-        <section>
-            <h2>Sobre Mi</h2>
-            <p>Soy un apasionado de la mecatrónica, la ciencia de datos y la vida misma. Actualmente trabajando en mi tesis y buscando oportunidades emocionantes en el campo de la ciencia de datos.</p>
-        </section>
-        <section>
-            <h2>Mis Intereses</h2>
-            <p>Me encantan los videojuegos (especialmente los RPG y MMORPG) y las obras de Jules Verne. Además, me vacilan Feynman, Camus, Watts y Miyamoto :3.</p>
-        </section>
-        <section>
-            <h2>Mis Metas</h2>
-            <p>Traer un cambio positivo a este mundo.</p>
-        </section>
-    </main>
+
+    <!-- Main Container -->
+    
+    <div class="container">
+        <!-- Left Side (Picture and Basic Info) -->
+        <div class="left-side">
+            <img src="./images/miuler_profile.png" alt="Your Image" class="profile-image-small">
+
+            <h2>Miuler Blas</h2>
+
+            <div class="section-buttons">
+                <button id="bio-button">Bio</button>
+                <button id="projects-button">Projects</button>
+                <button id="interests-button">Interests</button>
+            </div>            
+            
+
+            <div class="contact-info">
+                <h2>Contacto</h2>
+                <a href="https://www.linkedin.com/in/miuler-blas-marquina/" target="_blank">LinkedIn</a>
+                <a href="https://github.com/miulerbm" target="_blank">GitHub</a>
+                <a href="https://wa.me/51946574201" target="_blank">WhatsApp</a>
+            </div>
+
+        </div>
+
+
+
+        <!-- Right Side (Scrollable Sections) -->
+        <div class="right-side" id="right-side">
+            <!-- Content will be loaded here -->
+        </div>
+
+    </div>
+
+    <!-- Footer -->
     <footer>
-        <p>¡Gracias por visitar mi página! No vuelvas pronto <3<3</p>
+        <p>Responsive design coming soon... &Omega;<span id="current-year"></span></p>
     </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+
 </body>
 </html>
