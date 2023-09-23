@@ -188,3 +188,10 @@ p {
     padding: 0; /* Remove padding */
     margin: 0; /* Remove margin */
 }
+
+/* Estilos para el ícono de correo */
+.fa-envelope {
+    color: whitesmoke; /* Cambia el color del ícono según tus preferencias */
+    font-size: 20px; /* Ajusta el tamaño del ícono */
+    margin-right: 5px; /* Agrega espacio entre el ícono y el texto */
+}
