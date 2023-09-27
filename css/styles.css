@@ -22,7 +22,9 @@ footer {
     line-height: 1; /* Adjust the line height to make text closer together */
 }
 
-
+footer p {
+    text-align: center; /* Centra el texto dentro del párrafo del footer */
+  }
 
 .container {
     display: flex;
@@ -116,6 +118,7 @@ p {
     font-size: 1.2em;
     line-height: 1.4;
     margin-bottom: 20px;
+    text-align: justify; /*Justificando los parrafos*/
 }
 
 /* Style the scrollbar for the right-side section */
@@ -195,3 +198,17 @@ p {
     font-size: 20px; /* Ajusta el tamaño del ícono */
     margin-right: 5px; /* Agrega espacio entre el ícono y el texto */
 }
+
+/* Estilos para los tags */
+.tag-list {
+    font-size: 16px;
+  }
+  
+  .tag {
+    background-color: #3498db;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+  }
+  
