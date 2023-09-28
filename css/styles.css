@@ -47,9 +47,9 @@ footer p {
 }
 
 .profile-image-small {
-    width: 100px;
-    height: 133px; /* 3:4 aspect ratio */
-    border-radius: 0%;
+    width: 150px;
+    height: 150px; /* 3:4 aspect ratio */
+    border-radius: 25%;
     margin-bottom: 20px;
 }
 
