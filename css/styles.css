@@ -212,3 +212,24 @@ p {
     border-radius: 5px;
   }
   
+
+/* Estilo para el botón de descarga del CV */
+#download-cv-button {
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    font-size: 1em; /* Tamaño de fuente del texto */
+    padding: 5px 10px; /* Espaciado interno del botón (ajusta según tus preferencias) */
+    border: none; /* Quita el borde del botón */
+    border-radius: 5px; /* Borde redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición de color de fondo en hover */
+
+    /* Estilo en hover */
+    &:hover {
+        background-color: #2980b9; /* Cambia el color de fondo al pasar el cursor */
+    }
+}
+
+#download-cv-button:focus {
+    outline: none; /* Quita el contorno en enfoque (mejora la accesibilidad) */
+}

@@ -1,10 +1,14 @@
 
 // JavaScript
 
-    // Get the current year and update the content of the "current-year" element
+// Get the current year and update the content of the "current-year" element
 const currentYearElement = document.getElementById('current-year');
 const currentYear = new Date().getFullYear();
 currentYearElement.textContent = currentYear;
+
+
+// Download button for my CV
+const downloadCvButton = document.getElementById("download-cv-button");
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -52,4 +56,21 @@ document.addEventListener('DOMContentLoaded', () => {
         loadContent('right-side', 'sections/interests.html');
         showSection('interests-content');
     });
+});
+
+
+// Agrega un controlador de eventos al botón
+downloadCvButton.addEventListener("click", function() {
+    // Ruta al archivo PDF en la carpeta 'assets'
+    const pdfUrl = "/assets/CV_MiulerBlas.pdf";
+    
+    // Crea un enlace oculto
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+
+    // Establece el atributo "download" para forzar la descarga
+    link.download = 'CV_MiulerBlas.pdf';
+
+    // Dispara un evento de clic en el enlace
+    link.click();
 });
