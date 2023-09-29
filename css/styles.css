@@ -23,8 +23,17 @@ footer {
     line-height:0%;
 }
 
+footer p {
+    text-align: center;
+}
+
+p {
+    text-align: justify;
+}
+
 .container {
     display: flex;
+    flex-direction: row;
     background-color: #f5f5f5;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     width: 100%;
@@ -86,12 +95,28 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Estilo para los enlaces en la sección de contacto */
 .contact-info a {
     color: #3498db;
     font-size: 1.2em;
     text-decoration: none;
     margin-bottom: 10px;
 }
+
+/* Estilo para el ícono de LinkedIn en la sección de contacto */
+.contact-info a[href*="https://www.linkedin.com/in/miuler-blas-marquina/"]::before {
+    content: "\f08c"; /* Código del ícono de LinkedIn en Font Awesome 5 Brands */
+    font-family: 'Font Awesome 5 Brands';
+    margin-right: 5px; /* Aumento del margen derecho */
+}
+
+/* Estilo para el ícono de GitHub en la sección de contacto */
+.contact-info a[href*="https://github.com/miulerbm"]::before {
+    content: "\f09b"; /* Código del ícono de GitHub en Font Awesome 5 Brands */
+    font-family: 'Font Awesome 5 Brands';
+    margin-right: 5px; /* Aumento del margen derecho */
+}
+
 
 .contact-info a:hover {
     text-decoration: underline;
@@ -157,10 +182,10 @@ footer {
 #download-cv-button {
     background-color: #3498db; /* Color de fondo del botón */
     color: #fff; /* Color del texto del botón */
-    font-size: 0.75em; /* Tamaño de fuente del texto */
-    padding: 5px 10px; /* Espaciado interno del botón (ajusta según tus preferencias) */
+    font-size: 1em; /* Tamaño de fuente del texto (ajustado) */
+    padding: 10px 20px; /* Espaciado interno del botón (ajustado según tus preferencias) */
     border: none; /* Quita el borde del botón */
-    border-radius: 5px; /* Borde redondeado */
+    border-radius: 10px; /* Borde redondeado */
     cursor: pointer;
     transition: background-color 0.3s; /* Transición de color de fondo en hover */
 
@@ -168,10 +193,11 @@ footer {
     &:hover {
         background-color: #2980b9; /* Cambia el color de fondo al pasar el cursor */
     }
-}
 
-#download-cv-button:focus {
-    outline: none; /* Quita el contorno en enfoque (mejora la accesibilidad) */
+    /* Quita el contorno en enfoque (mejora la accesibilidad) */
+    &:focus {
+        outline: none;
+    }
 }
 
 
@@ -180,7 +206,7 @@ footer {
 
     /*Para la seccion bio y interests:*/
     #bio-content{
-        margin-right: 10%;
+        margin-right: 5%;
         margin-bottom: 10%;
     }
     #projects-content{
@@ -188,7 +214,7 @@ footer {
         margin-bottom: 10%;
     }
     #interests-content{
-        margin-right: 10%;
+        margin-right: 5%;
         margin-bottom: 10%;
     }
 
@@ -203,33 +229,53 @@ footer {
     .right-side {
         width: 100%;
         background-color: #fff;
-        max-height: 100vh;
+        height: 100%;
         overflow: auto;
         margin-right: 20px;
     }
 
     .info-bar {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
         width: 100%;
         order: -1;
-        padding: 10px; /* Ajusto el relleno */
+        padding: 1px; /* Ajusto el relleno */
+        height:12%;
     }
 
     .profile-image-small {
         display: none;
     }
 
-    .section-buttons, .contact-info {
-        margin-top: 10px; /* Reduzco el espacio superior */
-        flex-direction: row; /* Alineo los elementos horizontalmente */
-    }
+    /* Estilo para la sección de botones (Bio, Projects, Interests) */
 
-    .section-buttons button, .contact-info a {
-        margin: 0 10px; /* Aumento el margen entre elementos */
+    .section-buttons {
+        display: flex;
+        flex-direction: row; /* Alinea los botones horizontalmente */
+        justify-content:space-evenly; /* Espacio entre los botones */
+        margin-top: 1px; /* Espaciado superior */
     }
 
     .section-buttons button {
-        width: auto;
+        width: calc(33.33% - 10px); /* Tamaño igual para los 3 botones con margen entre ellos */
+        margin: 0px 15px 0px 0px; /* Espacio entre los botones */
     }
+
+    /* Estilo para la sección de contacto (LinkedIn, GitHub, Curriculum) */
+    .contact-info {
+        display: flex;
+        flex-direction: row; /* Alinea los enlaces horizontalmente */
+        justify-content: space-evenly; /* Espacio entre los enlaces */
+        margin-top: 1px; /* Espaciado superior */
+    }
+
+    .contact-info a {
+        margin: 0px 10px 0px 0px; /* Espacio entre los botones */
+    }
+    .contact-info button {
+        margin: 0px 10px 0px 0px; /* Espacio entre los botones */
+    }      
 
     .info-bar h2 {
         display: none;
@@ -251,14 +297,18 @@ footer {
         margin: 0;
     }
 
-    .contact-info a[href*="https://www.linkedin.com/in/miuler-blas-marquina/"]::before,
-    .contact-info a[href*="https://github.com/miulerbm"]::before {
-        content: "\f08c";
+    /* Estilo para el ícono de LinkedIn en la sección de contacto */
+    .contact-info a[href*="https://www.linkedin.com/in/miuler-blas-marquina/"]::before {
+        content: "\f08c"; /* Código del ícono de LinkedIn en Font Awesome 5 Brands */
         font-family: 'Font Awesome 5 Brands';
-        margin-right: 5px; /* Aumento el margen derecho */
+        margin-right: 5px; /* Aumento del margen derecho */
     }
 
-    .contact-info a[href*="https://wa.me/51946574201"] {
-        display: none;
+    /* Estilo para el ícono de GitHub en la sección de contacto */
+    .contact-info a[href*="https://github.com/miulerbm"]::before {
+        content: "\f09b"; /* Código del ícono de GitHub en Font Awesome 5 Brands */
+        font-family: 'Font Awesome 5 Brands';
+        margin-right: 5px; /* Aumento del margen derecho */
     }
+
 }
