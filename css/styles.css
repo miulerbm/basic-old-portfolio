@@ -6,7 +6,7 @@ body {
     padding: 0;
     background-color: #f5f5f5;
     color: #333;
-    font-size: 16px; /* Tamaño de fuente predeterminado */
+    font-size: 14px; /* Tamaño de fuente predeterminado */
     line-height: 1.5; /* Espaciado de línea predeterminado */
 }
 
@@ -65,7 +65,7 @@ p {
 }
 
 .section-buttons {
-    margin-top: 20px;
+    margin-top: 1px;
     display: flex;
     flex-direction: column; /* Alinea los botones verticalmente */
 }
@@ -85,7 +85,7 @@ p {
 }
 
 .contact-info {
-    margin-top: 20px;
+    margin-top: 1px;
     display: flex;
     flex-direction: column; /* Alinea los enlaces verticalmente */
 }
@@ -121,6 +121,30 @@ p {
 .contact-info a:hover {
     text-decoration: underline;
 }
+
+/* Estilo para el botón de descarga del CV */
+#download-cv-button {
+    margin-top: 1px;
+    background-color: #3498db; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    font-size: 1em; /* Tamaño de fuente del texto (ajustado) */
+    padding: 10px 20px; /* Espaciado interno del botón (ajustado según tus preferencias) */
+    border: none; /* Quita el borde del botón */
+    border-radius: 10px; /* Borde redondeado */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transición de color de fondo en hover */
+
+    /* Estilo en hover */
+    &:hover {
+        background-color: #2980b9; /* Cambia el color de fondo al pasar el cursor */
+    }
+
+    /* Quita el contorno en enfoque (mejora la accesibilidad) */
+    &:focus {
+        outline: none;
+    }
+}
+
 
 .right-side {
     width: 75%;
@@ -177,28 +201,6 @@ p {
     border-radius: 5px;
   }
   
-
-/* Estilo para el botón de descarga del CV */
-#download-cv-button {
-    background-color: #3498db; /* Color de fondo del botón */
-    color: #fff; /* Color del texto del botón */
-    font-size: 1em; /* Tamaño de fuente del texto (ajustado) */
-    padding: 10px 20px; /* Espaciado interno del botón (ajustado según tus preferencias) */
-    border: none; /* Quita el borde del botón */
-    border-radius: 10px; /* Borde redondeado */
-    cursor: pointer;
-    transition: background-color 0.3s; /* Transición de color de fondo en hover */
-
-    /* Estilo en hover */
-    &:hover {
-        background-color: #2980b9; /* Cambia el color de fondo al pasar el cursor */
-    }
-
-    /* Quita el contorno en enfoque (mejora la accesibilidad) */
-    &:focus {
-        outline: none;
-    }
-}
 
 
 /* Ajustes para dispositivos móviles */
@@ -275,7 +277,10 @@ p {
         justify-items: right; /* Espacio entre los enlaces */
         text-align: right;
         margin-top: 1px; /* Espaciado superior */
-        overflow: scroll;
+        overflow: hidden;
+
+        /* Nuevos ajustes para los botones */
+        align-items: center; /* Centra verticalmente los botones */
     }
 
     .contact-info a {
