@@ -206,15 +206,15 @@ p {
 
     /*Para la seccion bio y interests:*/
     #bio-content{
-        margin-right: 5%;
+        margin-right: 10%;
         margin-bottom: 10%;
     }
     #projects-content{
-        margin-right: 5%;
+        margin-right: 12%;
         margin-bottom: 10%;
     }
     #interests-content{
-        margin-right: 5%;
+        margin-right: 12%;
         margin-bottom: 10%;
     }
 
@@ -231,43 +231,51 @@ p {
         background-color: #fff;
         height: 100%;
         overflow: auto;
-        margin-right: 20px;
     }
 
     .info-bar {
         display: flex;
-        flex-direction: row;
         justify-content: space-evenly;
+        flex-direction: row;
         width: 100%;
         order: -1;
         padding: 1px; /* Ajusto el relleno */
-        height:12%;
+        font-size: 0.75em; /* Reduzco el tamaño de fuente */
+        overflow: hidden; /* Evita la barra de desplazamiento */
+
+        /* Nuevos ajustes para distribución en la barra de información */
+        margin: 0; /* Elimina los márgenes */
     }
 
     .profile-image-small {
         display: none;
     }
 
-    /* Estilo para la sección de botones (Bio, Projects, Interests) */
-
-    .section-buttons {
+     /* Estilo para la sección de botones (Bio, Projects, Interests) */
+     .section-buttons {
         display: flex;
         flex-direction: row; /* Alinea los botones horizontalmente */
-        justify-content:space-evenly; /* Espacio entre los botones */
+        justify-content: space-between; /* Espaciado equitativo entre los botones */
         margin-top: 1px; /* Espaciado superior */
+        overflow: hidden;
+
+        /* Nuevos ajustes para los botones */
+        align-items: center; /* Centra verticalmente los botones */
     }
 
     .section-buttons button {
-        width: calc(33.33% - 10px); /* Tamaño igual para los 3 botones con margen entre ellos */
-        margin: 0px 15px 0px 0px; /* Espacio entre los botones */
+        flex: 1; /* Distribuye el espacio equitativamente entre los botones */
+        margin: 0px 5px; /* Espacio entre los botones */
     }
 
     /* Estilo para la sección de contacto (LinkedIn, GitHub, Curriculum) */
     .contact-info {
         display: flex;
         flex-direction: row; /* Alinea los enlaces horizontalmente */
-        justify-content: space-evenly; /* Espacio entre los enlaces */
+        justify-items: right; /* Espacio entre los enlaces */
+        text-align: right;
         margin-top: 1px; /* Espaciado superior */
+        overflow: scroll;
     }
 
     .contact-info a {
@@ -287,6 +295,7 @@ p {
         border-radius: 10px;
         cursor: pointer;
         transition: background-color 0.3s;
+        margin: 0px 10px 0px 0px; /* Espacio entre los botones */
 
         &:hover {
             background-color: #2980b9;
