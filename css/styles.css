@@ -161,12 +161,13 @@ p {
 
 /* Style for the image container to center images */
 .project-image-container {
+    width:75%;
     text-align: center;
+    margin: 10px auto;
 }
 
 .project-image-container img {
-    width: 75%; /* Adjust the width as needed */
-    max-width: 75%; /* Set a maximum width if desired */
+    max-width: 75%;
     height: auto; /* Maintain the aspect ratio */
     display: block; /* Remove any inline spacing */
     margin: 10px auto; /* Center the images and add some margin */
@@ -175,8 +176,8 @@ p {
 /* Style for the <a> elements to remove padding and margin */
 .project a {
     display: inline-block; /* Set the display to inline-block */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    padding: 0px; /* Remove padding */
+    margin: 0px; /* Remove margin */
 }
 
 
@@ -192,14 +193,14 @@ p {
     font-size: 10px;
   }
   
-  .tag {
-    background-color: #dddddd;
-    font-family: monospace;
-    color: #0b1318;
-    padding: 2px 2px;
-    margin: 0 5px;
-    border-radius: 5px;
-  }
+.tag {
+background-color: #dddddd;
+font-family: monospace;
+color: #0b1318;
+padding: 2px 2px;
+margin: 0 5px;
+border-radius: 5px;
+}
   
 
 
